@@ -1,11 +1,25 @@
-#include <conversion.h>
+#include <iostream>
+#include "conversion.h"
 
+Figi::Figi(const char& figi)
+	: d_char(figi)
+{
+	std::cout << "constructor called" << std::endl;
+}
 
-int main(){
+Figi::Figi(const Figi& figi)
+	: d_char(figi.d_char)
+{
+	std::cout << "copy constructor called" << std::endl;
 
+ls
 
-	Ticker t = Ticker('t');
+Figi& Figi::operator=(const Figi& figi)
+{
+	if(this != &figi){
 
-	return 0;
-
+		d_char = figi.d_char;
+		std::cout << "assignment constructor called" << std::endl;
+	}
+	return *this;
 }

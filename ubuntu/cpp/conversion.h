@@ -1,9 +1,19 @@
+#ifndef INCLUDED_CONVERSION
+#define INCLUDED_CONVERSION
 
-class Ticker{
+
+class Figi{
 	
 	public:
-
+		Figi(const char& figi);
+		
+		Figi(const Figi& figi);
+		
+		Figi& operator=(const Figi& figi);
+	
 	private:
-		char d_ticker;
+		char d_char;
 
 };
+
+#endif

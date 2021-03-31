@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker run -it --mount source="$(dirname "$(pwd)")",target=/root,type=bind os/ubuntu
+docker run -it --mount source="$(pwd)",target=/home,type=bind os/ubuntu
